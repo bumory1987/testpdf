@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+  <haed><meta charset="UTF-8"></haed>
+  <HelloWorld></HelloWorld>
+ </template>
+
+<!-- <pdf src="./static/sample.pdf" :page="1">
+  <template v-slot:loading>
+    loading content here...
+  </template>
+</pdf> -->
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import pdf from 'pdfvuer'
+import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  setup(){
   }
 }
 </script>
