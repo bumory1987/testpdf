@@ -1,6 +1,6 @@
 <template>
   <haed><meta charset="UTF-8"></haed>
-  <HelloWorld></HelloWorld>
+  <ConMan></ConMan>
  </template>
 
 <!-- <pdf src="./static/sample.pdf" :page="1">
@@ -11,12 +11,12 @@
 
 <script>
 // import pdf from 'pdfvuer'
-import HelloWorld from './components/HelloWorld.vue';
+import ConMan from './components/ConMan.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ConMan
   },
   setup(){
   }

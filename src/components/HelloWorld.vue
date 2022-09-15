@@ -31,18 +31,17 @@ export default {
   components: {
     pdfvuer
   },
-  setup(){
+  props: ['linkInfo'],
+  setup(props){
+    console.log(props.linkInfo)
     const pageman = ref(1)
     const numPages = ref(0)
     const pdfdata = ref(pdfvuer.createLoadingTask(
-          {url :'./static/mi.pdf',
+          {url :props.linkInfo,
            }))
 
     const page = ref(1)
-    const forward= ()=>{
-      page.value = page.value+1
-      console.log(page.value)
-    }
+
     onMounted(()=>{
       pdfdata.value.then(pdf=>{
         numPages.value = pdf.numPages
@@ -50,7 +49,7 @@ export default {
       })
     })
  
-    return {pageman, pdfdata, numPages, page ,forward}
+    return {pageman, pdfdata, numPages, page }
   }
 }
 </script>
